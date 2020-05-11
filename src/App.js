@@ -1,6 +1,7 @@
 import React from 'react'
 import { GlobalStyle } from './style'
 import { Heading } from './components/Heading'
+import { ListItems } from './components/ListItems'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <GlobalStyle />
       <main>
         <Heading />
+        <ListItems />
       </main>
     </>
   )

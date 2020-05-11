@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Image } from './Image'
+import { Image } from '../Image'
 import './style.css'
 
-const Item = ({ id, index, background, onClick, name }) => {
-  const imageUrl = ` https://source.unsplash.com/collection/${index}/400x400`
+const Item = ({ id, index, name, background, onClick }) => {
+  const imageUrl = `https://api.adorable.io/avatars/285/${index}@adorable.png`
   const itemCardClass = classNames('item', background !== '' ? 'greyBg' : '')
+
   return (
     <div id={id} className={itemCardClass} onClick={onClick}>
       <Image url={imageUrl} />
