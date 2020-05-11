@@ -1,0 +1,32 @@
+.item {
+  display: flex;
+  border: 1px rgba(0, 0, 0, 0.15) solid;
+  padding: 1.5rem;
+  margin: 0 30px 80px;
+  background-color: #ffffff;
+  cursor: pointer;
+  width: 200px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px 5px #ededed;
+}
+
+.item.greyBg {
+  background-color: lightgray;
+}
+
+.item__img {
+  max-width: 110px;
+  border-radius: 50%;
+  position: relative;
+  top: -65px;
+}
+
+.item__profile .item__info .item__info-emoji {
+  padding-right: 1rem;
+}
+
+.item__profile {
+  font-size: 16px;
+  font-weight: 400;
+}

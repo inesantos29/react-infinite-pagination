@@ -38,6 +38,7 @@ function ListItems() {
     setLoading(true)
 
     const apiRoot = 'https://sf-legacy-api.now.sh'
+
     axios.get(`${apiRoot}/items?page=${page}&_limit=${perPage}`).then((res) => {
       setItems([...items, ...res.data.data])
       setTotalItems(res.totalItems / perPage)
@@ -84,7 +85,7 @@ function ListItems() {
               name={item.name}
               background={background.toString()}
               onClick={handleChangeColor}
-            ></Item>
+            />
           )
         })}
       </div>
