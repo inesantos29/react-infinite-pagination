@@ -1,11 +1,15 @@
 import React from 'react'
+import { GlobalStyle } from './style'
 import { Heading } from './components/Heading'
 
 function App() {
   return (
-    <main>
-      <Heading />
-    </main>
+    <>
+      <GlobalStyle />
+      <main>
+        <Heading />
+      </main>
+    </>
   )
 }
 
