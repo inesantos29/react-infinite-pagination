@@ -14,11 +14,15 @@ class ListItems extends Component {
     loading: true,
   }
 
+  // created just basic function
   changeBackground(id) {
+    // here I taking saved ids
     let getSavedIds = localStorage.getItem('ids')
+    // they are string and again I making array
     getSavedIds = getSavedIds
       ? getSavedIds.split(',').filter((savedId) => id === savedId)
       : ''
+    // returning filtered or finded result its empty String "" or id
     return getSavedIds
   }
 
@@ -71,15 +75,18 @@ class ListItems extends Component {
   }
 
   handleChangeColor = (e) => {
+    // i created ids
     let ids = localStorage.getItem('ids')
+    // controlling is there ids if in make them array with split other aways empty array
     ids = ids ? ids.split(',') : []
 
     const clickedEl = e.currentTarget
-
     if (clickedEl.classList.contains('greyBg')) {
+      // checking same ids in the array and filtering
       ids = ids.filter((id) => id !== clickedEl.id)
       clickedEl.classList.remove('greyBg')
     } else {
+      // checking same ids in the array and filtering
       ids = ids.filter((id) => id !== clickedEl.id)
       ids.push(clickedEl.id)
       clickedEl.classList.add('greyBg')
